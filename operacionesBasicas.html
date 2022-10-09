@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones Basicas</title>
+    <link rel="manifest" href="./manifiesto.json">
+    <script type="text/javascript">
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("sw.js");
+        }
+      </script>
+</head>
+<body>
+    <hr style="text-align: center;">Operaciones Basicas </hr>
+    <form action="">
+        <table border="1" align="center">
+            <tr>
+                <td>
+                    Ingrese valor 1:
+                    <input type="number" name="a" id="a">
+
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    Ingrese valor 2:
+                    <input type="number" name="b" id="b">
+ 
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" value="Calcular" onclick="Calcular();">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function Calcular() {
+            var num1 = parseInt(document.getElementById('a').value);
+            var num2 = parseInt(document.getElementById('b').value);
+            var suma = num1 + num2;
+            var resta = num1 - num2;
+            var mult = num1 * num2;
+            var Divicion = num1 / num2;
+            alert('la suma es : '+suma+' la resta es: '+resta+' la multiplicacion es: '+mult+' la divicion es: '+Divicion);
+        }
+    </script>
+</body>
+</html>
